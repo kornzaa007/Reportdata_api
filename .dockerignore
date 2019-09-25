@@ -1,0 +1,11 @@
+node_modules/*
+app/*
+deploy/*
+images/*
+test-pdf/*
+consents/pdf/*
+consents/uploads/*
+config
+package-lock.json
+README.md
+upload.sh

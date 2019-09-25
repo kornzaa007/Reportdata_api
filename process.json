@@ -1,0 +1,8 @@
+{
+  "apps": [
+    {
+      "name": "cannabis-api",
+      "script": "/home/cannabis/app/app.js"
+    }
+  ]
+}
