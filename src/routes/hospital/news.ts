@@ -4,10 +4,10 @@ import * as Knex from 'knex';
 import * as fastify from 'fastify';
 import * as moment from 'moment'
 import * as HttpStatus from 'http-status-codes';
-import { HosModel } from '../../models/hospital/hos';
+import { NewsModel } from '../../models/hospital/news';
 let shell = require("shelljs");
 
-const hosModel = new HosModel();
+const newsModel = new NewsModel();
 
 const router = (fastify, { }, next) => {
   var db: Knex = fastify.dbCannabis;
@@ -15,21 +15,20 @@ const router = (fastify, { }, next) => {
   fastify.get('/', { preHandler: [fastify.apiMonitoring] }, async (req: fastify.Request, reply: fastify.Reply) => {
     reply.code(HttpStatus.OK).send({
       statusCode: HttpStatus.OK,
-      message: 'USE Hospital'
+      message: 'Use News'
     })
   })
 
-  fastify.post('/get-all-hos', { preHandler: [fastify.apiMonitoring] }, async (req: fastify.Request, reply: fastify.Reply) => {
-    const hospcode = req.body.hospcode;
+  fastify.post('/get-all-news', { preHandler: [fastify.apiMonitoring] }, async (req: fastify.Request, reply: fastify.Reply) => {
     try {
-      const result: any = await hosModel.getAllHos(db);
+      const result: any = await newsModel.getAllNews(db);
       reply.send({
         statusCode: HttpStatus.OK,
         reccount: result.length,
         rows: result
       });
     } catch (error) {
-      console.log('get-all-hos', error.message);
+      console.log('get-all-news', error.message);
       reply.send({
         statusCode: HttpStatus.INTERNAL_SERVER_ERROR,
         message: error.message
