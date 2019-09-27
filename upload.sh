@@ -5,7 +5,7 @@ tsc
 echo '>>> delete map file'
 find ./app/ -name '*.map' -type f -delete
 
-serverList=("pck@203.157.3.75:/var/www/API/cannabis" "web@203.157.104.128:/var/www/cannabis/api")
+serverList=("pck@203.157.3.75:/var/www/API/hospital" "web@203.157.104.128:/var/www/hospital/api")
 for server in "${serverList[@]}"
 do
     echo "copy to server => $server"

@@ -1,8 +1,8 @@
 {
   "apps": [
     {
-      "name": "cannabis-api",
-      "script": "/home/cannabis/app/app.js"
+      "name": "hospital-api",
+      "script": "/home/hospital/app/app.js"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "cannabis-api",
+  "name": "hospital-api",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -39,8 +39,6 @@
     "mysql": "^2.17.1",
     "node-cron": "^2.0.3",
     "npm": "^6.10.3",
-    "pdf-fill-form": "^4.1.0",
-    "pg": "^7.12.1",
     "pino": "^5.13.2",
     "pino-pretty": "^2.6.1",
     "qrcode": "^1.4.1",

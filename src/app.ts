@@ -72,6 +72,7 @@ app.register(require('./routes/hospital/index'), { prefix: '/hospital', logger: 
 app.register(require('./routes/hospital/hos'), { prefix: '/hospital/hos', logger: true });
 app.register(require('./routes/hospital/news'), { prefix: '/hospital/news', logger: true });
 app.register(require('./routes/hospital/report'), { prefix: '/hospital/report', logger: true });
+app.register(require('./routes/hospital/login'), { prefix: '/hospital/login', logger: false });
 
 const port = +process.env.PORT || 8080;
 const host = '0.0.0.0';
